@@ -27,12 +27,11 @@ TasteBuds is a user-friendly application designed to help students and busy indi
 To manage the SQL Server database, you will need to install SQL Server Management Studio (SSMS) and SQL Server, a powerful tool for querying, designing, and administering yoru database.
 
 1. Visit Microsoft's [SQL Server download page](https://www.microsoft.com/en-ca/sql-server/sql-server-downloads) and click **Download now** underneath **Developer**
-2. After installation is complete, launch **SQL Server**.
-3. You should see a **Select Installation Type** page. Select **Basic**
-4. Accept the terms and click install. You may need to restart your computer.
+2. You should see a **Select Installation Type** page. Select **Basic**
+3. Accept the terms and click install. You may need to restart your computer.
 
-5. Visit the official [SQL Server Management Studio (SSMS) download page](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-6. Click on **Download SSMS** and follow the installation prompts to install SSMS on your computer.
+4. Visit the official [SQL Server Management Studio (SSMS) download page](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+5. Click on **Download SSMS** and follow the installation prompts to install SSMS on your computer.
 
 ### Step 2: Connect to the Local Server
 
@@ -106,11 +105,13 @@ To begin development of the Recipe Suggestion App, you will need to install **Vi
 
 <img src="./assets/VisualStudioStart.png" width="400">
 
-2. Once the project is loaded, press **F5** to build the project and start hosting the API locally (`https://localhost:7067`). You should see **This localhost page can't be found**. That is okay! This is a minimal API, so there are no front-end components for it. If you want to test it out, you can go to `https://localhost:7067/recipe`. A JSON object of recipes in our database should show up here.
+2. Once the project is loaded, press **F5** to build the project and start hosting the API locally (`https://localhost:7067`). Install any required certificates. 
+
+3. You should see **This localhost page can't be found**. That is okay! This is a minimal API, so there are no front-end components for it. If you want to test it out, you can go to `https://localhost:7067/recipe`. A JSON object of recipes in our database should show up here.
 
 <img src="./assets/APIPage.png" width="400">
 
-3. Congratulations! We are done setting up the TasteBudsAPI.
+4. Congratulations! We are done setting up the TasteBudsAPI.
 
 ## Setting up the Front-End
 
@@ -125,6 +126,11 @@ This project was created using [Angular CLI](https://github.com/angular/angular-
 
 ```bash
 npm install
+```
+
+4. Install the latest Angular cli with
+```bash
+npm install -g @angular/cli
 ```
 
 ### Step 2: Starting the local development server for preview
@@ -155,6 +161,13 @@ ng serve
    Password: `password`
 
 Feel free to create your own account and test it out as well! However, you will have to add your own pantry ingredients.
+
+### Troubleshooting: In case login is slow
+
+Due to Google Chrome's security settings, there may be cases where it does not allow access to the API running on localhost:7067.
+If this happens, the app will get stuck at trying to send a GET request to the API to check for a valid login.
+
+1. Please try opening https://localhost:4200 in a different web browser or in Google Chrome's incognito mode.
 
 ## Deployment to Android
 
