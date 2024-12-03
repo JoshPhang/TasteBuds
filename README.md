@@ -41,6 +41,12 @@ To manage the SQL Server database, you will need to install SQL Server Managemen
 3. Choose **Windows Authentication** as the authentication method (default option) if you're using your Windows credentials to connect.
 4. Click **Connect**.
 
+### Troubleshooting: In case Local Server does not connect
+
+1. Open **SQL Server 2022 Configuration Manager**, this can be searched using the taskbar.
+2. Click on **SQL Services** and right-click on **SQL Server(MSSQLSERVER)** and click start.
+3. Repeat Step 2 and connect to Local Server.
+
 ### Step 3: Create the local database and assign a user
 
 1. Once connected, you should see the **Object Explorer** window appear on the left.
